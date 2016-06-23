@@ -26,15 +26,15 @@ if(!empty($_POST)){
 		$referencia= $_SERVER['HTTP_REFERER'];
 		$fecha=date("Y-m-d");
 		$hora=date("H:i:s");
-		if(ereg('^[a-z]*[a-z]$',$usuario)){
+		//if(ereg('^[a-z]*[a-z]$',$usuario)){
 			//Administrador 1 2 3 4
 			
 			$reg=$personal->loginUsuarios($usuario,$pass);
 			$reg=array_shift($reg);
 			$sw=1;
-		}else{
+		//}else{
 			header("Location:./?u=".$url.'&error=1');		
-		}
+		//}
 		$codpersonal=$reg['codpersonal'];
 		
 		if($sw){
