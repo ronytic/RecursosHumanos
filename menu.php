@@ -28,7 +28,7 @@ $submenu=new submenu;
 <div class="clear"></div>
 <div class="grid_12 noimprimir">
 	<div class="usuariocuerpo">
-		<span class="pequenol">Nombre:</span> <?php echo $us['nombre'];?> | 
+		<span class="pequenol">Nombre:</span> <?php echo $us['nombres'];?> | 
 		<span class="pequenol">Usuario:</span> <?php echo $us['usuario'];?> |
 		<span class="pequenol">Hora Acceso:</span> <?php echo $_SESSION['horasesion'];?> |
 		<a href="<?php echo $folder?>usuarios/cambiarp.php?id=<?php echo $_SESSION['idusuario']?>" class="enlaceusuario">Cambiar Contraseña</a>
