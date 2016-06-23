@@ -37,16 +37,14 @@ $valores=array(	"materno"=>"'$materno'",
                 "codcontrato"=>"'$codcontrato'",
                 "iniciocontrato"=>"'$iniciocontrato'",
 				"duracioncontrato"=>"'$duracioncontrato'",
-                
-				"foto"=>"'$foto'",
-                "curriculum"=>"'$curriculum'",
+
 				
 				"password"=>"'$ci'",
 				);
 if($_FILES['foto']['name']!=""){				
 	$valores=array_merge($valores,array("foto"=>"'$foto'"));
 }
-if($_FILES['foto']['name']!=""){				
+if($_FILES['curriculum']['name']!=""){				
 	$valores=array_merge($valores,array("curriculum"=>"'$curriculum'"));
 }
 				$personal->actualizar($valores,$id);
