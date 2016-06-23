@@ -1,5 +1,6 @@
 <?php
 include_once("login/check.php");
+//print_r($_SESSION);
 $titulo="Inicio";
 $_SESSION['idmenu']=0;
 $_SESSION['subm']=0;
