@@ -6,7 +6,7 @@ class submenu extends bd{
 		$this->campos=array("*");
 		switch ($codUsuario) {
 			case 1:{return $this->getRecords("superadmin=1 and idmenu=$menu and activo=1","orden");}break;
-			case 2:{return $this->getRecords("administrador=1 and idmenu=$menu and activo=1","orden");}break;
+			case 2:{return $this->getRecords("administracion=1 and idmenu=$menu and activo=1","orden");}break;
 			case 3:{return $this->getRecords("encargadorrhh=1 and idmenu=$menu and activo=1","orden");}break;
 			case 4:{return $this->getRecords("personal=1 and idmenu=$menu and activo=1","orden");}break;
 		}
