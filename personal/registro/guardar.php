@@ -42,7 +42,7 @@ $valores=array(	"materno"=>"'$materno'",
 				"foto"=>"'$foto'",
                 "curriculum"=>"'$curriculum'",
 				
-				"password"=>"'$ci'",
+				"password"=>"MD5('$ci')",
 				);
 				$personal->insertar($valores);
 				

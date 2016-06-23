@@ -39,7 +39,7 @@ $valores=array(	"materno"=>"'$materno'",
 				"duracioncontrato"=>"'$duracioncontrato'",
 
 				
-				"password"=>"'$ci'",
+				"password"=>"MD5('$ci')",
 				);
 if($_FILES['foto']['name']!=""){				
 	$valores=array_merge($valores,array("foto"=>"'$foto'"));
