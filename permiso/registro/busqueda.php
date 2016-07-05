@@ -25,7 +25,7 @@ if (!empty($_POST)) {
 		$datos[$i]['motivo']=$g['motivo'];
         $datos[$i]['fechasalida']=$g['fechasalida'];
         
-        $datos[$i]['personal']=$per['paterno']." ".$per['materno']." ".$per['nombre'];
+        $datos[$i]['personal']=$per['paterno']." ".$per['materno']." ".$per['nombres'];
         $datos[$i]['horasalida']=$g['horasalida'];
         $datos[$i]['horaretorno']=$g['horaretorno'];
         switch($g['estado']){
