@@ -16,13 +16,6 @@ include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 ?>
 <script language="javascript">
-$(document).on("ready",function(){
-    $("#codcarrera").change(function(e) {
-        $.post("grupo.php",{"codcarrera":($("#codcarrera").val())},function(data){
-            $("#codgrupo").html(data);
-        })
-    });
-})
 </script>
 <?php include_once '../../cabecera.php';?>
 <div class="grid_12">

@@ -14,11 +14,6 @@ include_once '../../cabecerahtml.php';
 <script language="javascript">
 var linea=0;
 $(document).on("ready",function(){
-    $("#codcarrera").change(function(e) {
-        $.post("grupo.php",{"codcarrera":($("#codcarrera").val())},function(data){
-            $("#codgrupo").html(data);
-        })
-    });
     $(document).on("click",".aumentar",function(e){
 		e.preventDefault();
 		var posi=$(this).parent().parent();
