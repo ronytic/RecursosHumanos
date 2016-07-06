@@ -2,8 +2,10 @@
 include_once '../../login/check.php';
 $folder="../../";
 $titulo="Realizar Evaluación";
-print_r($_SESSION);
+//print_r($_SESSION);
 $codcargo=$_SESSION['codcargo'];
+$codpersonal=$_SESSION['codpersonal'];
+
 include_once("../../class/cargo.php");
 $cargo=new cargo;
 $car=array_shift($cargo->mostrarTodo("codcargo=".$codcargo,"nombrecargo"));
@@ -11,6 +13,11 @@ $car=array_shift($cargo->mostrarTodo("codcargo=".$codcargo,"nombrecargo"));
 include_once("../../class/pregunta.php");
 $pregunta=new pregunta;
 $pr=$pregunta->mostrarTodo("codcargo=".$codcargo);
+
+include_once("../../class/respuestageneral.php");
+$respuestageneral=new respuestageneral;
+$rg=$respuestageneral->mostrarTodo("codcargo=".$codcargo." and codpersonal=".$codpersonal);
+//echo count($rg);
 
 $turno=array("M"=>"Mañana","T"=>"Tarde","N"=>"Noche");
 include_once '../../funciones/funciones.php';
@@ -33,6 +40,7 @@ include_once '../../cabecerahtml.php';
 					</tr>
                     
                 </table>
+                <?php if(count($rg)==0){?>
                 <table class="tablareg">
                     <tr class="titulo">
                         <td width="10">N</td>
@@ -55,7 +63,11 @@ include_once '../../cabecerahtml.php';
                     <?php }?>
                     <tr><td colspan="2"></td><td colspan="5"><?php campos("Guardar","guardar","submit");?></td></tr>
                 </table>
-                
+                <?php }else{
+                ?> 
+                <center>
+                <h4>Usted ya realizó la evaluación para este cargo</h4></center>   
+                <?php }?>
                 
         	</fieldset>
 		</div>     
